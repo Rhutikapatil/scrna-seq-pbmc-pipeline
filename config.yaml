@@ -1,0 +1,37 @@
+# Pipeline configuration — scRNA-seq PBMC3k analysis
+# Adjust these to re-parameterize the pipeline without touching code.
+
+data:
+  source_url: "https://raw.githubusercontent.com/chanzuckerberg/cellxgene/main/example-dataset/pbmc3k.h5ad"
+  raw_h5ad: "data/raw/pbmc3k_expression_matrix.h5ad"
+
+qc:
+  min_genes_per_cell: 200      # drop low-complexity / empty droplets
+  min_cells_per_gene: 3        # drop genes detected in almost no cells
+  max_pct_mt: 10                # drop likely dying/stressed or doublet-contaminated cells
+  max_genes_per_cell: 4000      # drop likely doublets
+
+hvg:
+  n_top_genes: 2000
+  flavor: "seurat"
+
+clustering:
+  n_pcs: 30
+  n_neighbors: 15
+  leiden_resolution: 0.6
+  random_state: 0
+
+marker_genes:
+  method: "wilcoxon"
+  n_genes_per_cluster: 15
+
+cell_type_markers:
+  # canonical PBMC lineage markers used for automated cluster annotation
+  "CD4 T cells": ["IL7R", "CD3D", "CD3E", "CCR7"]
+  "CD8 T cells": ["CD8A", "CD8B", "CD3D", "CD3E"]
+  "B cells": ["MS4A1", "CD79A", "CD79B", "CD19"]
+  "NK cells": ["GNLY", "NKG7", "KLRD1", "KLRB1"]
+  "CD14+ Monocytes": ["CD14", "LYZ", "S100A8", "S100A9"]
+  "FCGR3A+ Monocytes": ["FCGR3A", "MS4A7", "CST3"]
+  "Dendritic cells": ["FCER1A", "CST3", "CLEC10A"]
+  "Platelets": ["PPBP", "PF4", "GP9"]

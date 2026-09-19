@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.snakemake/
+data/raw/*.h5ad
+data/processed/*.h5ad
+.DS_Store
