@@ -34,6 +34,19 @@ parameterized (`config.yaml`), staged into independent, cacheable rules
 outputs (tables + figures) rather than notebook cell output.
 
 ## Pipeline
+```mermaid
+flowchart LR
+    A[PBMC3k Expression Matrix] --> B[QC Filtering]
+    B --> C[Highly Variable Genes]
+    C --> D[PCA]
+    D --> E[kNN Graph]
+    E --> F[Leiden Clustering]
+    F --> G[UMAP]
+    F --> H[Marker Gene Analysis]
+    H --> I[Cell-Type Annotation]
+    G --> J[Final Visualizations]
+    I --> J
+```
 
 ```
 prepare_data → qc_filter → cluster → annotate_celltypes
