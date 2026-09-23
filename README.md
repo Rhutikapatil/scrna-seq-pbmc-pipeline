@@ -63,6 +63,22 @@ All thresholds (QC cutoffs, HVG count, PCs, clustering resolution, marker
 genes) live in `config.yaml` — re-running the pipeline with different
 parameters requires no code changes.
 
+## Project Status
+
+| Component | Status |
+| --- | --- |
+| PBMC3k data preparation | ✅ Implemented |
+| Cell and gene QC | ✅ Implemented |
+| Highly variable gene selection | ✅ Implemented |
+| PCA and neighborhood graph | ✅ Implemented |
+| Leiden clustering | ✅ Implemented |
+| UMAP visualization | ✅ Implemented |
+| Marker-gene identification | ✅ Implemented |
+| Automated cell-type annotation | ✅ Implemented |
+| Snakemake workflow | ✅ Implemented |
+| Docker environment | ✅ Configured |
+| T-cell subclustering / refined CD4 vs CD8 annotation | ⚠️ Future improvement |
+
 ## Data provenance
 
 Direct access to GEO/10x Genomics servers wasn't available from the build
