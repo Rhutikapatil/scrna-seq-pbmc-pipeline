@@ -141,6 +141,24 @@ recomputes the affected downstream stages.
 
 Python · scanpy · anndata · Leiden clustering · Snakemake · Docker
 
+## Skills Demonstrated
+
+- Single-cell RNA-seq analysis
+- Python bioinformatics workflows
+- Scanpy and AnnData
+- Quality-control filtering
+- Highly variable gene selection
+- PCA and neighborhood graph construction
+- Leiden clustering
+- UMAP dimensionality reduction
+- Differential expression analysis
+- Marker-gene identification
+- Cell-type annotation
+- Snakemake workflow development
+- Docker containerization
+- Reproducible bioinformatics pipelines
+- Parameterized analysis with YAML configuration
+
 ## Author
 
 Rhutika Patil — M.S. Bioinformatics, NC State University
