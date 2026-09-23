@@ -1,4 +1,10 @@
 # scRNA-seq PBMC Analysis Pipeline
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![Scanpy](https://img.shields.io/badge/Scanpy-single--cell%20analysis-1f77b4)
+![Snakemake](https://img.shields.io/badge/Snakemake-workflow-6A3D9A)
+![Docker](https://img.shields.io/badge/Docker-containerized-2496ED?logo=docker&logoColor=white)
+![UMAP](https://img.shields.io/badge/UMAP-dimensionality%20reduction-orange)
+![Leiden](https://img.shields.io/badge/Leiden-clustering-2E8B57)
 
 A reproducible single-cell RNA-seq workflow — QC → highly-variable-gene selection
 → Leiden clustering → marker-gene identification → automated cell-type annotation —
