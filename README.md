@@ -13,6 +13,18 @@ built as a **Snakemake** pipeline and containerized with **Docker**.
 Built on the canonical **10x Genomics PBMC3k** dataset (2,638 peripheral blood
 mononuclear cells from a healthy donor), a standard single-cell benchmark.
 
+## Project Highlights
+
+- Built a reproducible scRNA-seq workflow using Snakemake
+- Processed the canonical PBMC3k single-cell dataset
+- Performed cell-level and gene-level quality control
+- Selected highly variable genes for downstream analysis
+- Applied PCA, k-nearest-neighbor graph construction, Leiden clustering, and UMAP
+- Identified cluster-specific marker genes using Wilcoxon rank-sum testing
+- Implemented automated cell-type annotation using canonical PBMC marker genes
+- Containerized the workflow with Docker for reproducibility
+- Parameterized analysis thresholds through `config.yaml`
+- Documented biological interpretation and known annotation limitations
 ## Why this project
 
 Most scRNA-seq portfolio pieces are a single Jupyter notebook. This one is
